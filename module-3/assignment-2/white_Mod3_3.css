@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
+
+
+body { 
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    background-color: #1d0a11 ;
+    color: #dea8d6
+}
+
+
+h1 {
+  text-align: center;
+}
+
+
+.column {
+  width: 45%;
+}
+
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+h3 {
+  font-weight: 500;
+  margin: 0;
+  padding: 10px;
+}
+
+
+ol, ul {
+  font-weight: 300;
+  margin: 0;
+  padding: 10px;
+}
+
+
+.book-box {
+  border: 1px solid red;
+  border-radius: 15px;
+}
+
+
+.book-box ol {
+  list-style-position: inside;
+}
+
+
+.learned-box {
+  border: 1px dashed red;
+  border-radius: 15px;
+}
+
+
+.learned-box ul {
+  list-style-type: upper-roman;
+  list-style-position: inside;
+}
+
+
+.bottom {
+  width: 100%;
+  margin-top: 60%;
+}
+
+.bottom {
+  width: 100%;
+  margin-top: 60%;
+}
+
+.bottom a {
+  float: right;
+  margin-bottom: 20px;
+}
+
+
+.back-link {
+  float: right;
+  margin-bottom: 20px;
+}
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+li{
+    margin: 10px 0;
+}
