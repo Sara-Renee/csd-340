@@ -1,0 +1,74 @@
+
+/* Sara White - CSD-340 - Assignment 4.2 - CSS */
+
+body { f
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    background-color: #206567 ;
+}
+
+
+h1 {
+  text-align: center;
+}
+
+
+#image-gallery {
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 20px;
+}
+
+
+#image-gallery h3 {
+  text-align: center;
+}
+
+
+figure {
+  text-align: center;
+  margin: 0;
+}
+
+
+#image-gallery img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+
+figcaption {
+  font-style: italic;
+  font-size: 0.75em;
+  margin-top: 8px;
+}
+
+
+.bottom {
+  width: 100%;
+  margin-top: 60%;
+}
+
+.bottom a {
+  float: right;
+  margin-bottom: 20px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+h1 {
+  color: rgb(190, 190, 190);
+}
+
+#image-gallery h3 {
+  color: rgba(214, 168, 0, 1);
+}
+
+figcaption {
+  color: rgb(190, 190, 190);
+}
