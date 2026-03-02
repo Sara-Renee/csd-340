@@ -1,0 +1,3 @@
+*.zip
+**/*.zip
+**/images/background*.PNG
