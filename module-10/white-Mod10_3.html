@@ -1,0 +1,54 @@
+<!--Sara White - Assignment 10.3 - CSD-340 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Responsive design -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <script>
+      function displayImage(imageFile) {
+        var largerImage = document.getElementById("mainImage");
+        largerImage.src = imageFile;
+      }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="white-Mod10_3.css" />
+  </head>
+
+  <body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    
+    <h3>Here are some original works of art I've created:</h3>
+
+    <div>
+      <img id="mainImage" src="images/bluelady.png" alt="Main Image" />
+    </div>
+
+    <br />
+
+    <div class="thumbnail">
+      <img src="images/bluelady.png" onclick="displayImage('images/bluelady.png')" alt="thumb1" />
+      <img src="images/redlady.png" onclick="displayImage('images/redlady.png')" alt="thumb2" />
+      <img src="images/cartoonlady.jpg" onclick="displayImage('images/cartoonlady.jpg')" alt="thumb3" />
+      <img src="images/andyportrait.jpg" onclick="displayImage('images/andyportrait.jpg')" alt="thumb4" />
+    </div>
+
+    <p>Click a thumbnail to see the full image.</p>
+
+    <div class="bottom">
+      <a class="back-link" href="https://sara-renee.github.io/csd-340/index.html">Back to Landing Page</a>
+    </div>
+  </body>
+</html>
