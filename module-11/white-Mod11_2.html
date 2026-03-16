@@ -1,0 +1,159 @@
+<!--Sara White - Assignment 11.2 - CSD-340-->  
+  
+  <head>
+    <!-- Responsive design -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="white-Mod11_2.css" />
+  </head>
+
+
+ 
+  <body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <br />
+    <div class="card">
+      <div class="container">
+        <div class="first-panel">
+          <h3>Enter 5 of Your Current Favorite Songs</h3>
+
+          <label for="songInput">Song name:</label>
+          <input type="text" id="songInput" />
+
+          <!--onclick attributes added to Add/Sort A-Z button elements-->
+          <!--JavaScript function is called by onclick attribute-->
+          <button type="button" onclick="addSong()">Add</button>
+          <button type="button" onclick="sortSongs()">Sort A-Z</button>
+
+
+          <br />
+          <br />
+          
+          <label for="deleteSong">Select a song to delete:</label>
+          <select id="deleteSong"></select>
+          
+          <!--using onclick attribute to call JavaScript function for deleting song-->
+          <button type="button" onclick="deleteSelectedSong()">Delete Selected Song</button>
+        </div>
+
+        <div class="second-panel">
+          <h3>Your Current Top 5 Favorite Songs:</h3>
+          <div id="songDisplay"></div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+      let songs = [];
+
+      function displaySongs() {
+        let displayArea = document.getElementById("songDisplay");
+        let deleteSong = document.getElementById("deleteSong");
+
+        
+        if (songs.length === 0) {
+          displayArea.innerHTML = "No songs added yet.";
+        } else {
+          let output = "<strong>Your songs:</strong><ol>";
+          //initialize i, iterate over songs//
+          for (let i = 0; i < songs.length; i++) {
+            output += "<li>" + songs[i] + "</li>";
+          }
+          //display as ordered list//
+          output += "</ol>";
+          //innerHTML property to return content w/formatting intact//
+          displayArea.innerHTML = output;
+        }
+        
+        deleteSong.innerHTML = "";
+
+        for (let i = 0; i < songs.length; i++) {
+          let option = document.createElement("option");
+          option.value = i;
+          option.text = songs[i];
+          deleteSong.appendChild(option);
+        }
+      }
+
+      function addSong() {
+        let songInput = document.getElementById("songInput");
+        let newSong = songInput.value.trim();
+
+        //control for no input//
+        if (newSong === "") {
+          alert("Please enter a song.");
+          return;
+        }
+
+        //limit number of songs to 5//
+        if (songs.length >= 5) {
+          alert("You can only have 5 songs in your list.");
+          return;
+        }
+
+        //push() method to add songs to array//
+        songs.push(newSong);
+        alert('Added: "' + newSong + '"');
+
+        songInput.value = "";
+        displaySongs();
+      }
+
+      function sortSongs() {
+        if (songs.length === 0) {
+          alert("There are no songs to sort.");
+          return;
+        }
+
+        //.sort() method sorts ascending by default//
+        songs.sort();
+        alert("Your songs have been sorted alphabetically.");
+
+        displaySongs();
+      }
+
+      function deleteSelectedSong() {
+        if (songs.length === 0) {
+          alert("There are no songs to delete.");
+          return;
+        }
+
+        let deleteSong = document.getElementById("deleteSong");
+        let selectedIndex = deleteSong.value;
+        let songDeleted = songs.splice(selectedIndex, 1);
+
+        alert('Deleted: "' + songDeleted[0] + '"');
+
+        displaySongs();
+      }
+
+      displaySongs();
+    </script>
+  </body>
+  <br />
+  <br />
+  <div class="bottom">
+    <a class="back-link" href="https://sara-renee.github.io/csd-340/index.html">Back to Landing Page</a>
+  </div>
+
+</html>
+
+<!--
+References
+
+W3 Schools. (n.d.). JavaScript Events. https://www.w3schools.com/js/js_events.asp
+
+W3 Schools. (n.d.). JavaScript Array Sort. https://www.w3schools.com/js/js_array_sort.asp
+-->

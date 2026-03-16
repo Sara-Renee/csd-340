@@ -1,0 +1,75 @@
+/* Sara White - Assignment 11.2 - CSD-340 */
+
+      body {
+        font-family: Roboto, Arial, sans-serif;
+        margin: 40px;
+        background: 
+          linear-gradient(rgba(255, 148, 194, 0.612), rgba(151, 255, 219, 0.514)),
+          
+          url("images/mod11_2.PNG");
+        background-size: cover;
+        background-position: center;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      label {
+        font-weight: bold;
+        color: #000;
+        display: block; 
+        margin-bottom: 5px;
+      }
+
+
+      .container {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+      }
+      .first-panel, .second-panel {
+          flex: 1;
+        }
+
+      .card {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 14px;
+        box-shadow: 0 4px 8px #000000;
+        transition: .3s;
+        border-radius: 5px;
+        background: linear-gradient(rgba(255, 148, 194, 0.612), rgba(151, 255, 219, 0.514));
+      }
+
+      input[type="text"] {
+        width: 250px;
+        padding: 8px;
+        margin-right: 10px;
+        border-radius: 5px;
+        background-color: #fbd8ff;
+      }
+
+      button {
+        padding: 8px 12px;
+        margin: 5px 5px 5px 0;
+        cursor: pointer;
+        border-radius: 5px;
+        background: #00ffea
+      }
+
+  
+
+      #songDisplay {
+        background: #fbd8ff;
+        border: 1px solid #8a00b0;
+        border-radius: 5px;
+        padding: 15px;
+        min-height: 150px;
+      }
+
+      .bottom {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+      }
